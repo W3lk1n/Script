@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-kernel_version="4.14.90"
+kernel_version="4.14.129-bbrplus"
 
 if [[ ! -f /etc/redhat-release ]]; then
 	echo -e "仅支持centos"
