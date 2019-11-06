@@ -1,6 +1,6 @@
-yum -y install python-setuptools
+yum -y install python-setuptools libevent
 easy_install pip
-pip install shadowsocks
+pip install shadowsocks greenlet gevent
 echo 2443 > /root/.shadowsocks-port
 echo aes-256-cfb > /root/.shadowsocks-encryption
 date +%s%N | md5sum | base64 | head -c 10 > /root/.shadowsocks-password
