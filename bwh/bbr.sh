@@ -7,6 +7,11 @@ if [[ ! -f /etc/redhat-release ]]; then
 	exit 0
 fi
 
+if [[ "$(rpm -q centos-release|cut -d- -f1,3)" == "centos-7" ]]; then
+	echo -e "仅支持CentOS7。"
+	exit 0
+fi
+
 if [[ "$(uname -r)" == "${kernel_version}" ]]; then
 	echo -e "内核已经安装，无需重复执行。"
 	exit 0
